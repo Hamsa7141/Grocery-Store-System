@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store System</title>
+    <link rel="stylesheet" href="Styles/styles1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Your Local Grocery Store System</h1>
+    </header>
+    
+    <section id="inventory">
+        <h2>Inventory</h2>
+        <div id="notification"></div>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Inventory items will be  added here-->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="add-item">
+        <h2>Add New Item</h2>
+        <form id="addItemForm">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+            <label for="category">Category:</label>
+            <input type="radio" id="fruit" name="category" value="fruit" checked><label for="fruit">Fruit</label>
+            <input type="radio" id="dairy" name="category" value="dairy"><label for="dairy">Dairy</label>
+            <!-- more categories as needed -->
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" min="0.01" step="0.01" required>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <button type="submit">Add to Inventory</button>
+        </form>
+    </section>
+
+    <script src="scripts/scripts1.js"></script>
+</body>
+</html>
